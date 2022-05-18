@@ -33,3 +33,13 @@ To add a modified file to be committed use:
 
     git add file_name
 
+## Commit
+
+To send the changes to the repository use:
+
+    git commit -m "Some Message"
+
+Also can add and commit a file using:
+
+    git commit -am "Some Message"
+
