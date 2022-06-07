@@ -17,11 +17,25 @@ To change git text editor
     # Example:
     git config --gloval core.editor sublime
 
+To reset a config parameter:
+
+    git config --global --unset {parameter}
+    git config --global --unset user.email
+
+To view all config parameters:
+
+    git config --list
+
 ## Create a new repository
 
-Open the folder where the repository will be created and initialize it.
+Go to the folder where the repository will be created and initialize it.
 
     git init
+
+## Syncing the local repository with the server
+
+    git remote add origin {server-repository-link}
+    git push origin master
 
 ## Status
 
@@ -42,4 +56,3 @@ To send the changes to the repository use:
 Also can add and commit a file using:
 
     git commit -am "Some Message"
-
