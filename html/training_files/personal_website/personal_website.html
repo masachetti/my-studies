@@ -4,24 +4,25 @@
 <head>
     <meta charset="utf-8">
     <title>Mateus Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
-        <img src="imgs/avatar.png" alt="Meu avatar">
-        <h1>Mateus Sachetti</h1>
+        <img src="imgs/avatar.png" alt="Meu avatar" class="avatar">
+        <h1 id="title">Mateus Sachetti</h1>
     </header>
     <section>
         <header>
-            <h2>Posts</h2>
+            <h2 class="subtitle">Posts</h2>
         </header>
     </section>
-    <article>
+    <article class="post">
         <header>
-            <h3>Post #1</h3>
-            <img src="imgs/code_img.jpg" alt="Imagem com código">
+            <h3 class="post_title">Post #1</h3>
+            <img src="imgs/code_img.jpg" alt="Imagem com código" class="post_image">
         </header>
-        <p>
+        <p class="post_content">
             <a href="https://www.google.com.br" target="_blank">Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Nam rutrum fermentum augue, at posuere elit
             tincidunt et. Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
             posuere cubilia curae; Proin eget risus nisi. In malesuada fermentum velit mattis eleifend. Quisque aliquet
@@ -33,7 +34,7 @@
         </p>
     </article>
     <footer>
-        <ul>
+        <ul class="contact_list">
             <li>
                 <a href="mailto:mateus.sachetti@gmail.com">mateus.sachetti@gmail.com</a>
             </li>
