@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 300px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .add{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        #todo-desc{
+            width: 100%;
+            margin-right: 10px;
+        }
+        #todo-list{
+            margin-bottom: 10px;
+        }
+        .todo-item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4px;
+        }
+        .todo-item p{
+            margin: 0;
+        }
+    </style>
+    <script>
+        function addNewTodo(){
+            let todoDescription = document.getElementById('todo-desc').value;
+            let todoListWrapper = document.getElementById('todo-list');
+            let newTodo = document.createElement('div');
+            newTodo.classList.add('todo-item');
+            let newCheckbox = document.createElement('input');
+            newCheckbox.type='checkbox';
+            let newTodoDescription = document.createElement('p');
+            newTodoDescription.append(todoDescription);
+            newTodo.appendChild(newCheckbox);
+            newTodo.appendChild(newTodoDescription);
+            todoListWrapper.appendChild(newTodo);
+        }
+        function clearCompletes(){
+            let todoList = document.getElementById('todo-list');
+            let todoItems = Array.from(document.getElementsByClassName('todo-item'));
+            for (const item of todoItems) {
+                if (item.children[0].checked === true) 
+                    todoList.removeChild(item);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <div class="add">
+        <input type="text" name="todo-desc" id="todo-desc">
+        <button onclick="addNewTodo()">Add</button>
+    </div>
+    <div id="todo-list"></div>
+    <button onclick="clearCompletes()">Clear All Complete</button>
+</body>
+</html>
